@@ -1,9 +1,14 @@
 const visor = document.querySelector(".visor");
 const teclado = document.querySelector(".teclado");
+let numeroAntes = '';
+let operador = '';
+let numeroDepois = '';
+let comecarDoZero = true;
+
 
 teclado.addEventListener("click", function (event) {
     const botaoClicado = event.target;
-    
+
     if (botaoClicado.classList.contains("numero")) {
         console.log("numero");
     } else if (botaoClicado.classList.contains("ponto")) {
