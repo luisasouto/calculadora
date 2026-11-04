@@ -7,6 +7,8 @@
     <title>Calculadora JS</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -28,15 +30,15 @@
                         <button class="numero">2</button>
                         <button class="numero">3</button>
 
-                        <button class="numero-0">0</button>
+                        <button class="numero zero">0</button>
                         <button class="ponto">.</button>
                     </div>
                     <div class="digitos-2">
                         <div class="operadores">
-                            <button class="operador">-</button>
-                            <button class="operador">x</button>
-                            <button class="operador">/</button>
-                            <button class="operador">+</button>
+                            <button data-operador="-" class="operador">&minus;</button>
+                            <button data-operador="*" class="operador">&times;</button>
+                            <button data-operador="/" class="operador">&divide;</button>
+                            <button data-operador="+" class="operador">&plus;</button>
                         </div>
                     </div>
                 </div>
@@ -48,7 +50,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+
 </body>
 
 </html>

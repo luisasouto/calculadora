@@ -30,6 +30,9 @@ button {
         line-height: 32px;
         margin-bottom: 18px;
         border-radius: 4px;
+        text-align: end;
+        color: #e9eaec;
+        font-size: 18px;
     }
     .teclado {
         background-color: #242c43;
@@ -70,7 +73,7 @@ button {
                 font-size: 16px;
             }
 
-            .numero-0 {
+            .zero{
                 grid-column: 2 span;
             }
         }
