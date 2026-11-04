@@ -1,0 +1,18 @@
+const visor = document.querySelector(".visor");
+const teclado = document.querySelector(".teclado");
+
+teclado.addEventListener("click", function (event) {
+    const botaoClicado = event.target;
+    
+    if (botaoClicado.classList.contains("numero")) {
+        console.log("numero");
+    } else if (botaoClicado.classList.contains("ponto")) {
+        console.log("ponto");
+    } else if (botaoClicado.classList.contains("operador")) {
+        console.log("operador");
+    } else if (botaoClicado.classList.contains("limpar")) {
+        console.log("limpar");
+    } else if (botaoClicado.classList.contains("resultado")) {
+        console.log("resultado");        
+    }
+});
