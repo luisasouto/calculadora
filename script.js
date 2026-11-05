@@ -12,7 +12,7 @@ teclado.addEventListener("click", function (event) {
     if (botaoClicado.classList.contains("numero")) {
         const textoBotaoClicado = botaoClicado.textContent;
         console.log(textoBotaoClicado);
-        if (comecarDoZero) {
+        if (comecarDoZero || visor.textContent === "0") {
             visor.textContent = textoBotaoClicado;
         } else {
             visor.textContent = visor.textContent + textoBotaoClicado;
