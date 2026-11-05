@@ -10,7 +10,14 @@ teclado.addEventListener("click", function (event) {
     const botaoClicado = event.target;
 
     if (botaoClicado.classList.contains("numero")) {
-        console.log("numero");
+        const textoBotaoClicado = botaoClicado.textContent;
+        console.log(textoBotaoClicado);
+        if (comecarDoZero) {
+            visor.textContent = textoBotaoClicado;
+        } else {
+            visor.textContent = visor.textContent + textoBotaoClicado;
+        }
+        comecarDoZero = false;
     } else if (botaoClicado.classList.contains("ponto")) {
         console.log("ponto");
     } else if (botaoClicado.classList.contains("operador")) {
