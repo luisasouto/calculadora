@@ -32,7 +32,10 @@ teclado.addEventListener("click", function (event) {
         }
 
     } else if (botaoClicado.classList.contains("operador")) {
-        console.log("operador");
+        numeroAntes = visor.textContent;
+        operador = botaoClicado.dataset.operador;
+        comecarDoZero = true;
+        console.log(numeroAntes, operador);
 
     } else if (botaoClicado.classList.contains("limpar")) {
         console.log("limpar");
