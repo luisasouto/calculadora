@@ -32,15 +32,32 @@ teclado.addEventListener("click", function (event) {
         }
 
     } else if (botaoClicado.classList.contains("operador")) {
+
         numeroAntes = visor.textContent;
         operador = botaoClicado.dataset.operador;
         comecarDoZero = true;
         console.log(numeroAntes, operador);
 
+    } else if (botaoClicado.classList.contains("resultado")) {
+        numeroDepois = visor.textContent;
+
+        const numeroAntesConvertido = Number(numeroAntes);
+        const numeroDepoisConvertido = Number(numeroDepois);
+
+        console.log(typeof numeroAntesConvertido, typeof numeroDepoisConvertido);
+
+        let resultadoCalculo;
+
+        switch (operador) {
+            case value:
+                
+                break;
+        
+            default:
+                break;
+        }
+        
     } else if (botaoClicado.classList.contains("limpar")) {
         console.log("limpar");
-
-    } else if (botaoClicado.classList.contains("resultado")) {
-        console.log("resultado");
     }
 });
