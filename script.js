@@ -49,13 +49,28 @@ teclado.addEventListener("click", function (event) {
         let resultadoCalculo;
 
         switch (operador) {
-            case value:
-                
+            case "+":
+                resultadoCalculo = numeroAntesConvertido + numeroDepoisConvertido;
                 break;
-        
+            case "-":
+                resultadoCalculo = numeroAntesConvertido - numeroDepoisConvertido;
+                break;
+            case "*":
+                resultadoCalculo = numeroAntesConvertido * numeroDepoisConvertido;
+                break;
+            case "/":
+                if (numeroDepoisConvertido === 0) {
+                    resultadoCalculo = "Indefinido"
+                } else {
+                    resultadoCalculo = numeroAntesConvertido / numeroDepoisConvertido;
+                }
+                break;
             default:
                 break;
         }
+        visor.textContent = resultadoCalculo;
+        comecarDoZero = true;
+        console.log(resultadoCalculo);
         
     } else if (botaoClicado.classList.contains("limpar")) {
         console.log("limpar");
