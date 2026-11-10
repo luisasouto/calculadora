@@ -73,6 +73,12 @@ teclado.addEventListener("click", function (event) {
         console.log(resultadoCalculo);
         
     } else if (botaoClicado.classList.contains("limpar")) {
+        visor.textContent = "0";
+        numeroAntes = '';
+        operador = '';
+        numeroDepois = '';
+        comecarDoZero = true;
+
         console.log("limpar");
     }
 });
