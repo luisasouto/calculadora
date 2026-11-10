@@ -39,6 +39,10 @@ teclado.addEventListener("click", function (event) {
         console.log(numeroAntes, operador);
 
     } else if (botaoClicado.classList.contains("resultado")) {
+        if (operador === '') {
+            comecarDoZero = true;
+            return;
+        }
         numeroDepois = visor.textContent;
 
         const numeroAntesConvertido = Number(numeroAntes);
