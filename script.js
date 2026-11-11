@@ -26,20 +26,24 @@ teclado.addEventListener("click", function (event) {
         if (comecarDoZero) {
             visor.textContent = "0.";
             comecarDoZero = false;
-            
+
         } else if (!visor.textContent.includes(".")) {
             visor.textContent = visor.textContent + ".";
         }
 
     } else if (botaoClicado.classList.contains("operador")) {
+        if (visor.textContent === "Indefinido") {
+            return;
+        }
 
         numeroAntes = visor.textContent;
         operador = botaoClicado.dataset.operador;
         comecarDoZero = true;
+
         console.log(numeroAntes, operador);
 
     } else if (botaoClicado.classList.contains("resultado")) {
-        if (operador === '') {
+        if (operador === '' || visor.textContent === "Indefinido") {
             comecarDoZero = true;
             return;
         }
@@ -72,10 +76,11 @@ teclado.addEventListener("click", function (event) {
             default:
                 break;
         }
+
         visor.textContent = resultadoCalculo;
         comecarDoZero = true;
         console.log(resultadoCalculo);
-        
+
     } else if (botaoClicado.classList.contains("limpar")) {
         visor.textContent = "0";
         numeroAntes = '';
