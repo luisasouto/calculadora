@@ -77,6 +77,10 @@ teclado.addEventListener("click", function (event) {
                 break;
         }
 
+        if (typeof resultadoCalculo === "number") {
+            resultadoCalculo = Number(resultadoCalculo.toFixed(15));
+        }
+
         visor.textContent = resultadoCalculo;
         comecarDoZero = true;
         console.log(resultadoCalculo);
