@@ -13,7 +13,6 @@ teclado.addEventListener("click", function (event) {
     if (botaoClicado.classList.contains("numero")) {
 
         const textoBotaoClicado = botaoClicado.textContent;
-        console.log(textoBotaoClicado);
 
         if (comecarDoZero || visor.textContent === "0") {
             visor.textContent = textoBotaoClicado;
@@ -45,26 +44,20 @@ teclado.addEventListener("click", function (event) {
         comecarDoZero = true;
         igualRepetido = false;
 
-        console.log(numeroAntes, operador);
-
     } else if (botaoClicado.classList.contains("resultado")) {
         if (operador === '' || visor.textContent === "Indefinido") {
             comecarDoZero = true;
             return;
         }
-        
+
         if (igualRepetido) {
             numeroAntes = visor.textContent;
         } else {
-            numeroDepois = visor.textContent;            
+            numeroDepois = visor.textContent;
         }
 
         const numeroAntesConvertido = Number(numeroAntes);
         const numeroDepoisConvertido = Number(numeroDepois);
-
-        console.log(typeof numeroAntesConvertido, typeof numeroDepoisConvertido);
-        console.log(igualRepetido);
-
         let resultadoCalculo;
 
         switch (operador) {
@@ -79,7 +72,7 @@ teclado.addEventListener("click", function (event) {
                 break;
             case "/":
                 if (numeroDepoisConvertido === 0) {
-                    resultadoCalculo = "Indefinido"
+                    resultadoCalculo = "Indefinido";
                 } else {
                     resultadoCalculo = numeroAntesConvertido / numeroDepoisConvertido;
                 }
@@ -94,8 +87,7 @@ teclado.addEventListener("click", function (event) {
 
         visor.textContent = resultadoCalculo;
         comecarDoZero = true;
-        igualRepetido = true;
-        console.log(resultadoCalculo);
+        igualRepetido = true;        
 
     } else if (botaoClicado.classList.contains("limpar")) {
         visor.textContent = "0";
@@ -104,7 +96,5 @@ teclado.addEventListener("click", function (event) {
         numeroDepois = '';
         comecarDoZero = true;
         igualRepetido = false;
-
-        console.log("limpar");
     }
 });
