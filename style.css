@@ -4,11 +4,24 @@
     box-sizing: border-box;
 }
 
+.bitcount-single-font {
+    font-family: "Bitcount Single", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+}
+
 button {
     background: none;
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    font-family: "Bitcount Single", system-ui;
 }
 
 .container {
@@ -23,6 +36,7 @@ button {
     background-color: #394764;
     padding: 18px;
     border-radius: 12px;
+    max-width: 268px;
 
     .visor {
         background-color: #182033;
@@ -33,6 +47,9 @@ button {
         text-align: end;
         color: #e9eaec;
         font-size: 18px;
+        font-family: "Bitcount Single", system-ui;
+        font-variant-numeric: tabular-nums;
+        word-wrap: break-word;
     }
     .teclado {
         background-color: #242c43;
@@ -50,11 +67,11 @@ button {
             }
 
             .resultado {
-                background-color: #BF3C30;
+                background-color: #bf3c30;
             }
 
             .limpar {
-                background-color: #5B698E;
+                background-color: #5b698e;
             }
         }
     }
@@ -73,7 +90,7 @@ button {
                 font-size: 16px;
             }
 
-            .zero{
+            .zero {
                 grid-column: 2 span;
             }
         }
@@ -83,7 +100,7 @@ button {
             gap: 6px;
 
             button {
-                background: #5B698E;
+                background: #5b698e;
                 padding: 10px 20px;
                 font-size: 16px;
             }
