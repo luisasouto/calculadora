@@ -26,7 +26,7 @@ Calculadora funcional feita com HTML, CSS e JavaScript puro, como primeiro proje
 
 ## O que aprendi
 
-- Planejamento de cada etapa, entender o que acontece ou deve ser feito antes de ir para o codigo, pensar em cada passo, cada clique de botão e o que ele faz, entender isso primeiro antes de codar.
+- Planejamento de cada etapa, entender o que acontece ou deve ser feito antes de ir para o codigo, pensar em cada passo, cada clique de botão e o que ele faz.
 - Em vez de colocar um evento em cada botão, coloquei um só no teclado inteiro e usei o `event.target` pra saber qual botão foi clicado. Isso se chama delegação de eventos.
 - Com o `data-*`, o botão mostra `×` e `÷` pra quem usa, mas guarda `*` e `/` pro JavaScript fazer a conta.
 - Entendi que o que é criado dentro de uma função some a cada clique. Por isso as informações da conta ficam fora dela, pra continuarem guardadas até o `=`.
