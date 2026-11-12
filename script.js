@@ -4,6 +4,7 @@ let numeroAntes = '';
 let operador = '';
 let numeroDepois = '';
 let comecarDoZero = true;
+let igualRepetido = false;
 
 
 teclado.addEventListener("click", function (event) {
@@ -20,6 +21,7 @@ teclado.addEventListener("click", function (event) {
             visor.textContent = visor.textContent + textoBotaoClicado;
         }
         comecarDoZero = false;
+        igualRepetido = false;
 
     } else if (botaoClicado.classList.contains("ponto")) {
 
@@ -31,6 +33,8 @@ teclado.addEventListener("click", function (event) {
             visor.textContent = visor.textContent + ".";
         }
 
+        igualRepetido = false;
+
     } else if (botaoClicado.classList.contains("operador")) {
         if (visor.textContent === "Indefinido") {
             return;
@@ -39,6 +43,7 @@ teclado.addEventListener("click", function (event) {
         numeroAntes = visor.textContent;
         operador = botaoClicado.dataset.operador;
         comecarDoZero = true;
+        igualRepetido = false;
 
         console.log(numeroAntes, operador);
 
@@ -47,12 +52,18 @@ teclado.addEventListener("click", function (event) {
             comecarDoZero = true;
             return;
         }
-        numeroDepois = visor.textContent;
+        
+        if (igualRepetido) {
+            numeroAntes = visor.textContent;
+        } else {
+            numeroDepois = visor.textContent;            
+        }
 
         const numeroAntesConvertido = Number(numeroAntes);
         const numeroDepoisConvertido = Number(numeroDepois);
 
         console.log(typeof numeroAntesConvertido, typeof numeroDepoisConvertido);
+        console.log(igualRepetido);
 
         let resultadoCalculo;
 
@@ -83,6 +94,7 @@ teclado.addEventListener("click", function (event) {
 
         visor.textContent = resultadoCalculo;
         comecarDoZero = true;
+        igualRepetido = true;
         console.log(resultadoCalculo);
 
     } else if (botaoClicado.classList.contains("limpar")) {
@@ -91,6 +103,7 @@ teclado.addEventListener("click", function (event) {
         operador = '';
         numeroDepois = '';
         comecarDoZero = true;
+        igualRepetido = false;
 
         console.log("limpar");
     }
